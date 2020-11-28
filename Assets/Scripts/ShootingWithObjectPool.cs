@@ -1,27 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ShootingWithObjectPool : MonoBehaviour
 {
-    
-    [SerializeField] private int objectPoolCount;
-    [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firePoint;
     [SerializeField] private float bulletForce = 20f;
     
     
     private Rigidbody2D _rigidbody2D;
     private List<GameObject> _bulletsPool;
-    
+    private ObjectPooler _objectPooler;
 
     private void Awake()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
-        for (var i = 0; i < objectPoolCount; i++)
-        {
-            var instantiatedBulletPrefab = Instantiate(bulletPrefab);
-            _bulletsPool.Add(instantiatedBulletPrefab);
-        }
+        _objectPooler = ObjectPooler.Instance;
     }
 
     private void Update()
@@ -34,6 +27,9 @@ public class ShootingWithObjectPool : MonoBehaviour
 
     private void Shoot()
     {
-        Debug.Log("Shoot");
+        var bullet = _objectPooler.GetFromPool("bullet", firePoint.transform.position, firePoint.rotation);
+        var bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
+        bulletRigidbody.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        bullet.GetComponent<Bullet>().StartDeactivation();
     }
 }

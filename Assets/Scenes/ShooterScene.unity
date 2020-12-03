@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &80144688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 658412806175799010, guid: 8a9190af2d8f5414d9ba23008113bff7,
+    type: 3}
+  m_PrefabInstance: {fileID: 658412806149583218}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &132664212
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +263,56 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 35.987114, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &600574891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 600574893}
+  - component: {fileID: 600574892}
+  m_Layer: 0
+  m_Name: EnemyFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &600574892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600574891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e84aec345d8a3c42b35f48a5ebb10cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyStatsSo: {fileID: 11400000, guid: bd32d475b0c357d47827d33db6958615, type: 2}
+  enemyPrefab: {fileID: 6284487637184935236, guid: c2bffb020b5e8dc499ae045feaf16992,
+    type: 3}
+  numberOfEnemies: 10
+  spawnPosition: {fileID: 600574893}
+  player: {fileID: 80144688}
+  waitTimeTillNewEnemySpawn: 1
+--- !u!4 &600574893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600574891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &752031692
 GameObject:
   m_ObjectHideFlags: 0

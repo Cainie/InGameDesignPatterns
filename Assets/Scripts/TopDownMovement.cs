@@ -9,24 +9,18 @@ public class TopDownMovement : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     private Vector2 _movement;
     private Vector2 _mousePosition;
-    private Animator _animator;
      
 
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>();
     }
     
     private void Update()
     {
         //movementInput
         _movement.x = Input.GetAxisRaw("Horizontal");
-        _movement.y =Input.GetAxisRaw("Vertical");
-        
-        // _animator.SetFloat("Horizontal", _movement.x);
-        // _animator.SetFloat("Vertical", _movement.y);
-        // _animator.SetFloat("Speed", _movement.sqrMagnitude);
+        _movement.y = Input.GetAxisRaw("Vertical");
         
         //retrieving mouse position
         var mousePos = Input.mousePosition;

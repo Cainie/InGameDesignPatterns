@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a43dd6fa348dc34f8815f26c6852a25, type: 3}
   m_Name: VeryHardEnemyStats
   m_EditorClassIdentifier: 
-  _movementSpeed: 1
+  _movementSpeed: 2
   _maxHP: 5
   _enemyColor: {r: 0, g: 0, b: 0, a: 1}

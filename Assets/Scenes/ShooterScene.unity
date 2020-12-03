@@ -19818,7 +19818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e84aec345d8a3c42b35f48a5ebb10cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyStatsSo: {fileID: 11400000, guid: bd32d475b0c357d47827d33db6958615, type: 2}
+  enemyStatsSo: {fileID: 11400000, guid: 631d31de32cf4214dad7990236e43510, type: 2}
   enemyPrefab: {fileID: 6284487637184935236, guid: c2bffb020b5e8dc499ae045feaf16992,
     type: 3}
   numberOfEnemies: 20

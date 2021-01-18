@@ -1,37 +1,39 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Flyweight;
 using UnityEngine;
 
-public class EnemyFactory : MonoBehaviour
+namespace Factory
 {
-    [SerializeField] private EnemyStatsSO enemyStatsSo;
-    [SerializeField] private GameObject enemyPrefab;
-    [SerializeField] private int numberOfEnemies;
-    [SerializeField] private Transform spawnPosition;
-    [SerializeField] private GameObject player;
-    [SerializeField] private float waitTimeTillNewEnemySpawn;
-
-    private void Start()
+    public class EnemyFactory : MonoBehaviour
     {
-        enemyStatsSo.SetPlayer(player);
-        StartCoroutine(SpawnEnemies());
-        
-    }
+        [SerializeField] private EnemyStatsSO enemyStatsSo;
+        [SerializeField] private GameObject enemyPrefab;
+        [SerializeField] private int numberOfEnemies;
+        [SerializeField] private Transform spawnPosition;
+        [SerializeField] private GameObject player;
+        [SerializeField] private float waitTimeTillNewEnemySpawn;
 
-    private IEnumerator SpawnEnemies()
-    {
-        for (var i = 0; i < numberOfEnemies; i++)
+        private void Start()
         {
-            SpawnEnemy();
-            yield return new WaitForSeconds(waitTimeTillNewEnemySpawn);
+            enemyStatsSo.SetPlayer(player);
+            StartCoroutine(SpawnEnemies());
+        
         }
-    }
 
-    private void SpawnEnemy()
-    {
-        var spawnedEnemy = Instantiate(enemyPrefab, spawnPosition);
-        var enemyData = spawnedEnemy.GetComponent<Enemy>();
-        enemyData.SetEnemyStats(enemyStatsSo);
+        private IEnumerator SpawnEnemies()
+        {
+            for (var i = 0; i < numberOfEnemies; i++)
+            {
+                SpawnEnemy();
+                yield return new WaitForSeconds(waitTimeTillNewEnemySpawn);
+            }
+        }
+
+        private void SpawnEnemy()
+        {
+            var spawnedEnemy = Instantiate(enemyPrefab, spawnPosition);
+            var enemyData = spawnedEnemy.GetComponent<Enemy>();
+            enemyData.SetEnemyStats(enemyStatsSo);
+        }
     }
 }

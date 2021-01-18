@@ -1,6 +1,11 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+public enum BulletType
+{
+    MachineGunBullet,
+    BazookaBullet
+}
 
 public class Bullet : MonoBehaviour
 {

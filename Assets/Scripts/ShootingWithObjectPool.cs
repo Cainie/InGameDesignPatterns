@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using ObjectPool;
 using UnityEngine;
 
@@ -7,8 +6,7 @@ public class ShootingWithObjectPool : MonoBehaviour
 {
     [SerializeField] private Transform firePoint;
     [SerializeField] private float bulletForce = 20f;
-    
-    
+
     private Rigidbody2D _rigidbody2D;
     private List<GameObject> _bulletsPool;
     private ObjectPooler _objectPooler;

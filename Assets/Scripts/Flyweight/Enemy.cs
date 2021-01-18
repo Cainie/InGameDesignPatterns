@@ -5,6 +5,8 @@ namespace Flyweight
 {
     public class Enemy : MonoBehaviour
     {
+        public static event Action<int> enemyKill;
+        
         private int _currentHp;
         private EnemyStatsSO _enemyStatsSo;
         private Rigidbody2D _rigidbody2D;
@@ -36,6 +38,7 @@ namespace Flyweight
             _currentHp--;
             if (_currentHp <= 0)
             {
+                enemyKill?.Invoke(_enemyStatsSo._points);
                 Destroy(gameObject);
             }
         }

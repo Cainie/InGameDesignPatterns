@@ -172,6 +172,51 @@ Transform:
   m_Father: {fileID: 881328343}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &163575185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 163575187}
+  - component: {fileID: 163575186}
+  m_Layer: 0
+  m_Name: ShootingManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &163575186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163575185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04d30e884806284aa54bbd96041bcc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 377344461}
+  bulletForce: 20
+--- !u!4 &163575187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163575185}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 496561524}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &173944095
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +405,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250187631}
   m_CullTransparentMesh: 0
+--- !u!4 &377344461 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1939641298, guid: 8a9190af2d8f5414d9ba23008113bff7,
+    type: 3}
+  m_PrefabInstance: {fileID: 658412806149583218}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &439834129
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,6 +445,151 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &495017980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 495017981}
+  - component: {fileID: 495017982}
+  m_Layer: 0
+  m_Name: WeaponsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &495017981
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495017980}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 496561524}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &495017982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495017980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eecef6b996dc0f43adda109940abf49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _weapons
+      Entry: 7
+      Data: 0|UnityEngine.Rendering.SerializedDictionary`2[[Weapons.WeaponType, Assembly-CSharp],[Weapons.Weapon,
+        Assembly-CSharp]], Unity.RenderPipelines.Core.Runtime
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Weapons.WeaponType,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 7
+      Data: 2|Weapons.Weapon, Assembly-CSharp
+    - Name: weaponType
+      Entry: 3
+      Data: 0
+    - Name: bulletType
+      Entry: 3
+      Data: 0
+    - Name: nextBulletWaitTime
+      Entry: 4
+      Data: 0.2
+    - Name: reloadTime
+      Entry: 3
+      Data: 2
+    - Name: numberOfBullets
+      Entry: 3
+      Data: 100
+    - Name: currentNumberOfBullets
+      Entry: 3
+      Data: 100
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: 3|Weapons.Weapon, Assembly-CSharp
+    - Name: weaponType
+      Entry: 3
+      Data: 1
+    - Name: bulletType
+      Entry: 3
+      Data: 1
+    - Name: nextBulletWaitTime
+      Entry: 4
+      Data: 1
+    - Name: reloadTime
+      Entry: 3
+      Data: 4
+    - Name: numberOfBullets
+      Entry: 3
+      Data: 5
+    - Name: currentNumberOfBullets
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  _shootingManager: {fileID: 163575186}
 --- !u!1 &496561523
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,6 +620,8 @@ Transform:
   - {fileID: 1952250183}
   - {fileID: 1034003601}
   - {fileID: 1270672242}
+  - {fileID: 163575187}
+  - {fileID: 495017981}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20168,8 +20366,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pools:
-  - tag: bullet
+  - tag: MachineGunBullet
     prefabToInstantiate: {fileID: 7524060360372706850, guid: 192d1de31202d094fa3f6d08750fb723,
+      type: 3}
+    poolSize: 50
+  - tag: BazookaBullet
+    prefabToInstantiate: {fileID: 8536316753144450481, guid: ecc20eaf3df78364087aacaee19ac6e6,
       type: 3}
     poolSize: 20
 --- !u!4 &1952250183
@@ -20308,5 +20510,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4237787500228828738, guid: 8a9190af2d8f5414d9ba23008113bff7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8a9190af2d8f5414d9ba23008113bff7, type: 3}

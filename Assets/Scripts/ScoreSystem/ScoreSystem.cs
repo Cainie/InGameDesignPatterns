@@ -8,6 +8,7 @@ namespace ScoreSystem
     {
 
         [SerializeField] private TextMeshProUGUI scoreText;
+        [SerializeField] private TextMeshProUGUI winText;
     
         private int _score;
 
@@ -25,6 +26,10 @@ namespace ScoreSystem
         {
             _score += pointsToAdd;
             scoreText.text = $"Score: {_score}!";
+            if (_score == 100)
+            {
+                winText.text = "You Win!";
+            }
         }
     }
 }

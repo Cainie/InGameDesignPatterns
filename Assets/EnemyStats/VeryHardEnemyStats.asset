@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movementSpeed: 2
   _maxHP: 5
+  _points: 3
   _enemyColor: {r: 0, g: 0, b: 0, a: 1}

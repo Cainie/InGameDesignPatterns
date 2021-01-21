@@ -144,3 +144,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDeactivate: 5
+  explosionSprite: {fileID: 7671355303568741265, guid: f768c6b3bac842c4f94cfb2b928e19ea,
+    type: 3}

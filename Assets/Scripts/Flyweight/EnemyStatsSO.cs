@@ -7,6 +7,7 @@ namespace Flyweight
     {
         public float _movementSpeed;
         public int _maxHP;
+        public int _points;
         public Color _enemyColor;
         private GameObject _player;
 

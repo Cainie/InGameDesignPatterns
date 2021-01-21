@@ -30,6 +30,7 @@ namespace Flyweight
         {
             if (!other.tag.Equals("bullet")) return;
             other.gameObject.SetActive(false);
+            other.GetComponent<Bullet>().LeaveExplosion();
             LoseHp();
         }
 

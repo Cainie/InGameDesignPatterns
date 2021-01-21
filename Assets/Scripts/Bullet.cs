@@ -10,10 +10,16 @@ public enum BulletType
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float timeToDeactivate;
+    [SerializeField] private GameObject explosionSprite;
 
     public void StartDeactivation()
     {
         StartCoroutine(DeactivateAfterSetTime());
+    }
+
+    public void LeaveExplosion()
+    {
+        Instantiate(explosionSprite,transform.position,Quaternion.identity);
     }
 
     private IEnumerator DeactivateAfterSetTime()

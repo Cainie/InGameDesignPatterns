@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections;
 using ObjectPool;
+using PauseMenu;
 using UnityEngine;
 using Weapons;
 
 public class ShootingManager : MonoBehaviour
 {
     [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject reloadingText;
     [SerializeField] private float bulletForce = 20f;
 
     public event Action<WeaponType> ReloadEvent;
@@ -32,6 +34,8 @@ public class ShootingManager : MonoBehaviour
 
     private void Update()
     {
+        if (PauseSystem.IsGamePaused) return; 
+        
         if (!Input.GetKeyDown(KeyCode.Mouse0)) return;
         if (!_emptyMagazine)
         {
@@ -47,22 +51,22 @@ public class ShootingManager : MonoBehaviour
 
     private void Shoot()
     {
-        if (!_stabilizing)
+        if (_stabilizing) return;
+        ShootBullet();
+        _weapon.currentNumberOfBullets -= 1;
+        if (_weapon.currentNumberOfBullets == 0)
         {
-            ShootBullet();
-            _weapon.currentNumberOfBullets -= 1;
-            if (_weapon.currentNumberOfBullets == 0)
-            {
-                _emptyMagazine = true;
-            }
-            StartCoroutine(WaitForWeaponStability());
+            _emptyMagazine = true;
         }
+        StartCoroutine(WaitForWeaponStability());
     }
 
     private IEnumerator WaitForReload()
     {
         _reloading = true;
+        reloadingText.SetActive(true);
         yield return new WaitForSeconds(_weapon.reloadTime);
+        reloadingText.SetActive(false);
         ReloadEvent?.Invoke(_weapon.weaponType);
         _emptyMagazine = false;
         _reloading = false;

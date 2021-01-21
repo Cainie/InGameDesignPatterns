@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -7,7 +6,7 @@ namespace Weapons
 {
     public class WeaponsManager : SerializedMonoBehaviour
     {
-        [SerializeField] Dictionary<WeaponType, Weapon> _weapons;
+        [SerializeField] private Dictionary<WeaponType, Weapon> _weapons;
         [SerializeField] private ShootingManager _shootingManager;
 
         private void OnEnable()
